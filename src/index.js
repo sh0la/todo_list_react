@@ -1,9 +1,28 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import UserInput from './UserInput';
+import Listing from './components/Listing'
+import TodoItem from './components/TodoItem';
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+class Page extends Component {
+  constructor(props) {
+    super(props);
+  }
+  
+  render() {
+    console.log(this.props)
+    return(
+      <div>
+        <UserInput />
+        <Listing name="eat potato"/>
+  
+      </div>
+    )
+  }
+}
+
+ReactDOM.render(<Page />, document.getElementById('root'));
 
 
